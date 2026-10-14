@@ -17,7 +17,7 @@ export class ContaPoupanca extends ContaBancaria<ContaPoupancaProps>{
     }
 
     renderJuros(){
-        this.props.saldo += (this.props.saldo * 0.15);
+        this.props.saldo += (this.props.saldo * this.getTaxaAniversario);
     }
 
      public exibirExtrato(): void {
