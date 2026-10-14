@@ -8,8 +8,8 @@ export class ContaPoupanca extends ContaBancaria<ContaPoupancaProps>{
 
     get getTaxaAniversario(): number { return this.props.taxaAniversario}
 
-    set setTaxaAniversario(novoTaxaAniversario: string) {
-        if (novoTaxaAniversario.trim().length === 0) {
+    set setTaxaAniversario(novoTaxaAniversario: number) {
+        if (novoTaxaAniversario == 0) {
             console.log("\n ERRO: O TaxaAniversario não pode ser vazio!");
             return;
         }

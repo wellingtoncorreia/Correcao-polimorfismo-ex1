@@ -9,8 +9,8 @@ export class ContaCorrente extends ContaBancaria<ContaCorrenteProps>{
 
     get getLimite(): number { return this.props.limite}
 
-    set setLimite(novoLimite: string) {
-        if (novoLimite.trim().length === 0) {
+    set setLimite(novoLimite: number) {
+        if (novoLimite == 0) {
             console.log("\n ERRO: O Limite não pode ser vazio!");
             return;
         }
